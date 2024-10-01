@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 10 - Estilos de texto CSS</title>
+  <!-- Normaliza el css -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="../estio-texto/styles1.css">
+</head>
+
+<body>
+  <!-- <h1>CSS <span>Cascade Style sheet</span></h1>
+
+  <p>
+    Hola Mundo 
+    <a href="#">Esto es un enlace</a>
+  </p> -->
+
+  <!-- <div class="padre">
+    <div id="hijo">
+      <h1>Hijo</h1>
+    </div>
+  </div> -->
+  <main>
+    <h1>Estilos de texto</h1>
+
+    <section>
+      <h2>COLOR EN EL TEXTO (color)</h2>
+      <p>
+        El color de texto en CSS se establece utilizando la propiedad color. Esta propiedad permite definir el color del
+        texto en un elemento HTML. Por ejemplo, para establecer el color del texto en rojo, se puede utilizar el
+        siguiente código:
+      </p>
+      <p>
+      <pre>
+          <code>
+          h2 {
+            color: red;
+          }
+          </code>
+        </pre>
+      </p>
+    </section>
+
+    <section>
+      <h2>TAMAÑO DE TEXTO (font-size)</h2>
+      <p>
+        El tamaño de fuente en CSS se establece utilizando la propiedad font-size. Esta propiedad permite definir el
+        tamaño de la fuente en un elemento HTML. Por ejemplo, para establecer el tamaño de la fuente en 26 píxeles, se
+        puede utilizar el siguiente código:
+      </p>
+      <p>
+      <pre>
+          <code>
+            h2 {
+              font-size: 26px;
+            }
+          </code>
+        </pre>
+      </p>
+      <p>
+        <strong>NOTA</strong><br>
+        Un px es la unidad de medida para los tamanos <br>
+        <em>px</em>: Unidad absoluta o unidad de medida <br>
+        <em>rem</em>: Unidad del ancestro, si no se especifica tamaño al padre x defaullt 16px <br>
+        <em>rem</em>: Unidad de etiqueta HTML
+      </p>
+    </section>
+
+    <section>
+      <h2>PESO DE TIPOGRAFIA (font-weight)</h2>
+      <p>
+        El peso de la fuente en CSS se establece utilizando la propiedad font-weight. Esta propiedad permite definir el
+        grosor o peso de la fuente en un elemento HTML. Por ejemplo, para establecer el peso de la fuente en negrita, se
+        puede utilizar el siguiente código:
+      </p>
+      <p>
+      <pre>
+          <code>
+            h2 {
+              font-weight: bold;
+            }
+          </code>
+      </pre>
+      </p>
+      <p>
+        VALORES POSIBLES DE FONT-WEIGHT <br><br>
+
+        100-300: fuentes delgadas (lighter)<br>
+        400: fuente normal (normal)<br>
+        500-700: fuentes seminegritas (bolder)<br>
+        800-900: fuentes negritas (bold)<br>
+      </p>
+    </section>
+
+    <section>
+      <h2>RECETEADOR DEL ESTILO</h2>
+      <p>
+        Una alternativa moderna y compatible con HTML5 a los restablecimientos de CSS. Normalize.css hace que los
+        navegadores representen todos los elementos de manera más uniforme y acorde con los estándares modernos.
+      </p>
+      <a href="https://necolas.github.io/normalize.css/">Normalizar.css</a>
+    </section>
+
+    <section>
+      <h2>Google fonts - @font-face (font-family)</h2>
+      <p>
+        <a href="https://fonts.google.com/">Google Fonts</a> es una biblioteca de fuentes de tipografía que se puede
+        utilizar en proyectos <br><br>
+        <strong>Formas de llamado a los estilos</strong>
+      </p>
+      <p>
+      <pre>
+          <code>
+            /* @import: Importa carga las fuentes de Google Fonts en tu proyecto. */
+
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300
+
+            p {
+              font-family: "Roboto",serif;
+              font-weight: 500;
+            }
+
+
+
+            /* @font-face: Utiliza la propiedad @font-face para cargar fuentes de Google de manera local */
+
+            @font-face {
+              font-family: "Roboto Condensed", sans-serif;
+              src: url(../estio-texto/fonts/RobotoCondensed-Italic-VariableFont_wght.ttf);
+              font-weight: normal;
+              font-style: italic;
+            }
+
+            h2 {
+              color: red;
+              font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+              font-weight: 700;
+            }
+          </code>
+        </pre>
+      </p>
+    </section>
+    <section>
+      <h2>TRANSFORMACION DE TEXTO (text-transform)</h2>
+      <p>
+        La propiedad <strong>text-transform</strong> en CSS se utiliza para controlar la forma en que se muestra el
+        texto en un elemento HTML. Esta propiedad permite transformar el texto en mayúsculas, minúsculas, título o
+        dejarlo sin cambios.
+      </p>
+      <p>
+        <strong>Valores posibles de text-transform</strong><br><br>
+        <em>none</em> : No aplica ninguna transformación al texto. <br><br>
+        <em>capitalize</em> : Convierte la primera letra de cada palabra en mayúscula y el resto en minúscula. <br><br>
+        <em>uppercase</em> : Convierte todo el texto en mayúscula. <br><br>
+        <em>lowercase</em> : Convierte todo el texto en minúscula. <br><br>
+        <em>inherit</em> : Hereda el valor de la propiedad - text-transform del elemento padre. <br>
+      </p>
+      <p>
+      <pre>
+          <code>
+            /* Dejar el texto sin cambios: */
+
+            span {
+              text-transform: none;
+            }
+
+            /* Convierte la primera letra de cada palabra en mayúscula: */
+
+            p {
+              text-transform: capitalize;
+            }
+
+            /* Convierte todo el texto en mayúscula: */
+
+            h1 {
+              text-transform: uppercase;
+            }
+
+            /* Convierte todo el texto en minúscula. */
+
+            h2 {
+              text-transform: lowercase;
+            }
+
+            /* Hereda el valor de la propiedad - text-transform del elemento padre */
+
+            h2 {
+              text-transform: inherit;
+            }
+          </code>
+        </pre>
+      </p>
+    </section>
+
+    <section>
+      <h2>Alinear Texto (text-align)</h2>
+      <p>
+        La propiedad text-align en CSS se utiliza para controlar la alineación horizontal del texto dentro de un
+        elemento HTML. Esta propiedad permite alinear el texto a la izquierda, derecha, centro o justificarlo.
+      </p>
+      <p>
+        <strong>Valores posibles de text-align</strong><br><br>
+        left: Alinea el texto a la izquierda del elemento.<br>
+        right: Alinea el texto a la derecha del elemento.
+        center: Alinea el texto en el centro del elemento.<br>
+        justify: Justifica el texto, es decir, ajusta el espacio entre las palabras para que el texto se extienda desde
+        la izquierda hasta la derecha del elemento.<br>
+        inherit: Hereda el valor de la propiedad text-align del elemento padre. <br>
+        EJEMPLOS
+      </p>
+      <p>
+      <pre>
+          <code>
+            /* Alinea el texto a la izquierda del elemento. */
+            text-align: left;
+
+            /* Alinea el texto a la derecha del elemento. */
+            text-align: right;
+
+            /* Alinea el texto en el centro del elemento. */
+            text-align: center;
+
+            /* Justifica el texto. */
+            text-align: justify;
+
+            /*  Hereda el valor de la propiedad text-align del elemento padre. */
+            text-align: inherit;
+          </code>
+        </pre>
+      </p>
+    </section>
+
+    <section>
+      <h2>Estilos de texto (font-style)</h2>
+      <p>
+        La propiedad <strong>font-style</strong> en CSS se utiliza para definir el estilo de fuente de un elemento HTML,
+        como si es normal, cursiva o oblicua.
+      </p>
+      <p>
+        <strong>Valores posibles de font-style</strong><br><br>
+        normal: El texto se muestra en su estilo normal. <br>
+        italic: El texto se muestra en cursiva. <br>
+        oblique: El texto se muestra en oblicua.<br>
+        EJEMPLOS
+      </p>
+      <p>
+      <pre>
+          <code>
+            /* Establece el estilo de fuente en normal. */
+            font-style: normal;
+
+            /* Establece el estilo de fuente en cursiva. */
+            font-style: italic;
+
+            /* Establece el estilo de fuente en oblicua. */
+            font-style: oblique;
+          </code>
+        </pre>
+      </p>
+    </section>
+
+    <section>
+      <h2>Decoración de Texto (text-decoration)</h2>
+      <p>
+        La propiedad text-decoration en CSS se utiliza para agregar decoraciones al texto, como subrayados, tachados o
+        sobrelineados.
+      </p>
+      <p>
+        <strong>Valores posibles de text-decoration</strong> <br><br>
+
+        <em>none</em>: No aplica ninguna decoración al texto. <br>
+        <em>underline</em>: Agrega un subrayado al texto. <br>
+        <em>overline</em>: Agrega un sobrelineado al texto. <br>
+        <em>line-through</em>: Agrega un tachado al texto. <br>
+        <em>inherit</em>: Hereda el valor de la propiedad text-decoration del elemento padre. <br><br>
+        EJEMPLOS
+      </p>
+      <p>
+      <pre>
+          <code>
+            /* No aplica ninguna decoración al texto. */
+            text-decoration: none;
+
+            /* Agrega un subrayado al texto. */
+            text-decoration: underline;
+
+            /* Agrega un sobrelineado al texto. */
+            text-decoration: overline;
+
+            /* Agrega un tachado al texto. */
+            text-decoration: line-through;
+
+            /* Hereda el valor de la propiedad text-decoration del elemento padre. */
+            text-decoration: inherit;
+          </code>
+        </pre>
+      </p>
+    </section>
+
+    <section>
+      <h2>Espaciado entre letras (Letter-Spacing)</h2>
+      <p>
+        La propiedad letter-spacing en CSS se utiliza para controlar el espacio entre letras en un texto. Esta propiedad
+        permite aumentar o disminuir el espacio entre letras para mejorar la legibilidad o crear un efecto visual
+        específico.
+      </p>
+      <p>
+        <strong>Valores posibles de letter-spacing</strong> <br><br>
+        <em>normal</em>: Utiliza el valor por defecto del navegador. <br>
+        <em>length</em>: Establece un valor de longitud para el espacio entre letras
+        <em>inherit</em>: Hereda el valor de la propiedad letter-spacing del elemento padre <br>
+        EJEMPLOS:
+      </p>
+      <p>
+        <pre>
+          <code>
+            /* Establece el espacio entre letras en su valor predeterminado. */
+            letter-spacing: normal;
+
+            /* Establece el espacio entre letras en un valor específico, como px, em, %, etc. */
+            letter-spacing: 10px;
+
+            /* Hereda el valor de la propiedad letter-spacing del elemento padre. */
+            letter-spacing: inherit;
+          </code>
+        </pre>
+      </p>
+    </section>
+
+    <section>
+      <h2>Espaciado entre palabras (word-spacing)</h2>
+      <p>
+        La propiedad word-spacing en CSS se utiliza para controlar el espacio entre palabras en un texto. Esta propiedad permite aumentar o disminuir el espacio entre palabras para mejorar la legibilidad o crear un efecto visual específico.
+      </p>
+      <p>
+        <strong>Valores posibles de word-spacing</strong> <br><br>
+        <em>normal</em>: Utiliza el valor por defecto del navegador. <br>
+        <em>length</em>: Establece un valor de longitud para el espacio entre palabras
+        <em>inherit</em>: Hereda el valor de la propiedad word-spacing del elemento padre
+      </p>
+      <p>
+        <pre>
+          <code>
+            /* Establece el espacio entre palabras en su valor predeterminado. */
+            word-spacing: normal;
+
+            /*  Establece el espacio entre palabras en un valor específico, como px, em, %, etc. */
+            word-spacing: 8px;
+
+            /* Hereda el valor de la propiedad word-spacing del elemento padre. */
+            word-spacing: inherit;
+          </code>
+        </pre>
+      </p>
+    </section>
+  </main>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
